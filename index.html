@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Password Generator</h1>
+
+        <div class="display-container">
+
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <button data-copy class="copyBtn">
+                <span data-copyMsg class="tooltip" ></span>
+                <img id="btn1" src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png" alt="copy" width="23" height="23" >
+            </button>
+
+        </div>
+
+
+        <div class="input-container">
+
+            <!--password length section-->
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+            
+            <!--slider-->
+            <div class="slidercontainer">
+           <input type="range" id="inputSlider" min="4" max="20" value="10" class="slider" step="1" data-lengthSlider>
+
+            </div>
+            <!-- checkboxes-->
+            <div class="checkbox-container">
+            <div>
+                <input type="checkbox" id="uppercase" class="check">
+                <label for="uppercase">Includes Uppercase letters</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="lowercase" class="check">
+                <label for="lowercase">Includes Lowercase letters</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="numbers" class="check">
+                <label for="numbers">Includes Numbers </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="symbols" class="check">
+                <label for="symbols">Includes Symbols </label>
+            </div>
+            </div>
+
+            <!-- strength section-->
+            <div class="strength-container">
+                <p>Strength</p>
+                <div data-indicator></div>
+            </div>
+
+            <!-- generate password-->
+            <button class="generateButton">Generate Password</button>
+
+        </div>
+
+    </div>
+    <div class="footer">
+  <p>&copy; 2023 Vishal Singh. All rights reserved.</p>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
